@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -7,7 +9,9 @@ import static org.hamcrest.Matchers.notNullValue;
 public class ShowOrderListTest extends ScooterSitePreload {
 
     @Test
-    public void ShowOrderListTest() {
+    @DisplayName("Show order list test")
+    @Description("Check valid load orders list")
+    public void showOrderListTest() {
         Response response =
                 given()
                         .header("Content-type", "application/json")
